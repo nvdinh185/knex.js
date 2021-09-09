@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/node": "^16.7.13",
     "knex": "^0.95.11",
+    "mysql": "^2.18.1",
     "sqlite3": "^5.0.2",
     "ts-lib": "0.0.5",
     "ts-node": "^10.2.1",
