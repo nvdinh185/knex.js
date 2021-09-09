@@ -9,11 +9,11 @@ const knex = require('knex')({
 (async () => {
   try {
     // Create a table
-    await knex.schema
-      .createTable('users1', table => {
-        table.increments('id');
-        table.string('username');
-      });
+    // await knex.schema
+    //   .createTable('users1', table => {
+    //     table.increments('id');
+    //     table.string('username');
+    //   });
 
     // Then query the table...
     await knex('users1').insert({ username: 'Tim' });
