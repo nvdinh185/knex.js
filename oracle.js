@@ -4,25 +4,28 @@ const knex = require('knex')({
     host: '10.151.59.59',
     user: 'LABOR_EXP_OWNER_WEB',
     password: 'labor_exp',
-    database: 'pkg_web',
+    database: 'SERV',
   },
   useNullAsDefault: true
 });
 
 (async () => {
   try {
+
     // Create a table
     // await knex.schema
-    //   .createTable('users1', table => {
+    //   .createTable('dinhtest', table => {
     //     table.increments('id');
     //     table.string('username');
     //   });
 
-    // Then query the table...
-    // await knex('users1').insert({ username: 'Tim' });
+    // // Then query the table...
+    // await knex('dinhtest').insert({ username: 'Tim' });
 
-    // Query both of the rows.
-    const selectedRows = await knex('users').select('username');
+    // const selectedRows = await knex("JOB_TYPE").select("JOB_ID");
+    // const selectedRows = await knex("LABOR_EXP_OWNER.JOB_TYPE").select("JOB_ID", "JOB_NAME");
+    // const selectedRows = await knex("LABOR_EXP_OWNER.JOB_TYPE").select();
+    const selectedRows = await knex("JOB_TYPE").select();
 
     // map over the results
     const enrichedRows = selectedRows.map(row => ({ ...row }));
